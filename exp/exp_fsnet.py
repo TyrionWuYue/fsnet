@@ -92,6 +92,7 @@ class Exp_TS2VecSupervised(Exp_Basic):
             'ECL': Dataset_Custom,
             'Solar': Dataset_Custom,
             'custom': Dataset_Custom,
+            'PEMS04': Dataset_Custom
         }
         data_dict = defaultdict(lambda: Dataset_Custom, data_dict_)
         Data = data_dict[self.args.data]

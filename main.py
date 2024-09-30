@@ -116,7 +116,7 @@ parser.add_argument('--opt', type=str, default='adam')
 
 parser.add_argument('--test_bsz', type=int, default=-1)
 parser.add_argument('--n_inner', type=int, default=1)
-parser.add_argument('--use_gpu', type=bool, default=False, help='use gpu')
+parser.add_argument('--use_gpu', type=bool, default=True, help='use gpu')
 parser.add_argument('--gpu', type=int, default=0, help='gpu')
 parser.add_argument('--use_multi_gpu', action='store_true', help='use multiple gpus', default=False)
 parser.add_argument('--devices', type=str, default='0,1,2,3',help='device ids of multile gpus')
@@ -140,13 +140,14 @@ data_parser = {
     'ETTm1':{'data':'ETTm1.csv','T':'OT','M':[7,7,7],'S':[1,1,1],'MS':[7,7,1]},
     'ETTm2':{'data':'ETTm2.csv','T':'OT','M':[7,7,7],'S':[1,1,1],'MS':[7,7,1]},
     'WTH':{'data':'WTH.csv','T':'WetBulbCelsius','M':[12,12,12],'S':[1,1,1],'MS':[12,12,1]},
-    'ECL':{'data':'ECL.csv','T':'MT_320','M':[321,321,321],'S':[1,1,1],'MS':[321,321,1]},
+    'ECL':{'data':'ECL.csv','T':'OT','M':[321,321,321],'S':[1,1,1],'MS':[321,321,1]},
     'Solar':{'data':'solar_AL.csv','T':'POWER_136','M':[137,137,137],'S':[1,1,1],'MS':[137,137,1]},
     'Toy': {'data': 'Toy.csv', 'T':'Value', 'S':[1,1,1]},
     'ToyG': {'data': 'ToyG.csv', 'T':'Value', 'S':[1,1,1]},
     'Exchange': {'data': 'exchange_rate.csv', 'T':'OT', 'M':[8,8,8]},
     'Illness': {'data': 'national_illness.csv', 'T':'OT', 'M':[7,7,7]},
     'Traffic': {'data': 'traffic.csv', 'T':'OT', 'M':[862,862,862]},
+    'PEMS04' : {'data': 'PEMS04.csv', 'T':'306', 'M':[307,307,307]}
 }
 if args.data in data_parser.keys():
     data_info = data_parser[args.data]

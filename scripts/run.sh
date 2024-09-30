@@ -32,8 +32,8 @@ done
 
 
 
-# python -u main.py --method fsnet --root_path ./data/ --n_inner 1 --test_bsz 1 --data ECL --features M --seq_len 60 --label_len 0 --pred_len 48 --des 'Exp' --itr 1 --train_epochs 6 --learning_rate 1e-3 --online_learning 'full'
-
+# python main.py --method fsnet --root_path ./data/ --n_inner 1 --test_bsz 1 --data ECL --features M --seq_len 60 --label_len 0 --pred_len 48 --des 'Exp' --itr 1 --train_epochs 6 --learning_rate 1e-3 --online_learning 'full'
+# python main.py --method fsnet --root_path ./data/ --n_inner 1 --test_bsz 1 --data PEMS04 --features M --seq_len 12 --label_len 0 --pred_len 12 --des 'Exp' --itr 1 --train_epochs 6 --learning_rate 1e-3 --online_learning 'full' --freq 5min --inverse
 
 
 
