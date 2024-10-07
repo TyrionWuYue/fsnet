@@ -5,3 +5,4 @@
 **/__pycache__/
 data/ECL/electricity.csv
 data/traffic/traffic.csv
+/data/*.csv
