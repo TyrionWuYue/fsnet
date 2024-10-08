@@ -301,6 +301,14 @@ class Exp_TS2VecSupervised(Exp_Basic):
             else:
                 outputs = self.model(x)
 
+            # Observed
+            # batch_size, horizon, N = batch_y.shape
+            # observed_outputs = outputs.reshape(batch_size, horizon, N)
+            # observed_true = batch_y
+            # observed_outputs = observed_outputs[:, 0, :].squeeze().to(self.device)
+            # observed_true = observed_true[:, 0, :].squeeze().to(self.device)
+
+            # loss = criterion(observed_outputs, observed_true)
             loss = criterion(outputs, true)
             loss.backward()
             self.opt.step()       
